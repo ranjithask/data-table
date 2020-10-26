@@ -1,6 +1,8 @@
 
 ## Initial Machine Setup
-    A demo app for data table handling the data dynamically as desired by user. user is provided with wide variety of props to customise the way data is rendered on table.
+    A demo app for data table handling the data dynamically as desired by user. 
+    user is provided with wide variety of props to customise the way data is 
+    rendered on table.
 
 1. **Run the setup script**
 
