@@ -15,13 +15,16 @@ const DataTable = ({ photos, actions }) => {
         start: 0,
         limit: 5
     });
-
+    const deleteAlbum = row => {
+        actions.deleteData(row);
+    }
     const fetchData = (_start, _limit) => {
         actions.getData(_start, _limit);
     }
     const tableStructure = {
         title: TableTitle,
-        renderer: dataTableRenderer
+        renderer: dataTableRenderer,
+        deleteRow: deleteAlbum
     }
     useEffect(() => {
         fetchData(paginationData.start, paginationData.limit);

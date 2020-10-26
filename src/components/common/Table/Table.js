@@ -7,7 +7,7 @@ import '../../../styles/table.scss';
 
 //A generic table component
 const Table = ({ data, meta }) => {
-    const { title, renderer } = meta;
+    const { title, renderer, deleteRow } = meta;
 
     return (
         <div className='data-container'>
@@ -17,10 +17,13 @@ const Table = ({ data, meta }) => {
                         {
                             title.map(row => <TableCell key={row.id} data={row.name} isHead />)
                         }
+                        {
+                            deleteRow && <TableCell data="" isHead />
+                        }
                     </tr>
                 </thead>
                 <tbody>
-                    <TableRow data={data} title={title} renderer={renderer} />
+                    <TableRow data={data} title={title} renderer={renderer} deleteRow={deleteRow}/>
                 </tbody>
             </table>}
         </div>

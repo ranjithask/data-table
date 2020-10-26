@@ -11,3 +11,12 @@ export const getData = (_start, _limit) => {
     });
   }
 }
+
+export const deleteData = (row) => {
+  return async function (dispatch) {
+    return dispatch({
+      type: types.DELETE_DATA,
+      row
+    });
+  }
+}
